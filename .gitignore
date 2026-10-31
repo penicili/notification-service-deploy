@@ -1,4 +1,2 @@
-secret.yaml
-*secret.yaml
 .env*
 !.env.example
