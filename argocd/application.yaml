@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/penicili/notification-service.git
+    repoURL: https://github.com/penicili/notification-service-deploy.git
     targetRevision: master
     path: helm/notification-service
     helm:
@@ -17,5 +17,8 @@ spec:
     server: https://kubernetes.default.svc
     namespace: notif
   syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
